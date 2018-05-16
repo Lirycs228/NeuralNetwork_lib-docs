@@ -1,0 +1,32 @@
+.. NeuralNetwork_lib documentation master file, created by
+   sphinx-quickstart on Wed May 16 22:15:26 2018.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to NeuralNetwork_lib's documentation!
+=============================================
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Contents:
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+Perceptron
+==========
+
+Initializing a Perceptron
+-------------------------
+::
+
+	int num_inputs = 2;
+	int num_outputs = 1;
+	Perceptron pnn = new Perceptron(num_inputs, num_outputs);
+
