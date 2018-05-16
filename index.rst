@@ -4,20 +4,12 @@
    contain the root `toctree` directive.
 
 Welcome to the documentation of NeuralNetwork_lib!
-=================================================
+==================================================
 
 .. toctree::
    :maxdepth: 0
    :caption: Contents:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
 Perceptron
 ==========
@@ -63,7 +55,7 @@ Neural Network
 ==============
 
 Initializing a Neural Network
-----------------------------
+-----------------------------
 >>> int num_inputs = 2;
 >>> int[] num_hidden = new int[] {4, 3};
 >>> int num_outputs = 1;
@@ -102,6 +94,9 @@ Setting extra Variables
 
 Saving and Loading
 ==================
+
+.. DANGER::
+   save() may throw an IOException
 
 Perceptron
 ----------
