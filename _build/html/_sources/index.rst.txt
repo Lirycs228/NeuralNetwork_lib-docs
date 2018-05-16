@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to the documentation of NeuralNetwork_lib!
-==================================================
+NeuralNetwork_lib
+=================
 
 .. toctree::
    :maxdepth: 0
@@ -105,9 +105,9 @@ Setting extra Variables
 -----------------------
 .. code-block:: java
 
-  pnn.set_learning_rate(float);
-  pnn.set_momentum_rate(float);
-  pnn.set_print_interval(int);
+  pnn.set_mutation_rate(float);
+  pnn.set_evolution_rate(float);
+  pnn.set_offspring_mutation_rate(float);
 
 Neural Network
 ==============
