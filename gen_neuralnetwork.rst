@@ -11,7 +11,7 @@ Initializing a Genetic Neural Network
   int num_outputs = 1;
   int population_size = 100;
   int random_per_generation = 10;
-  Perceptron gnn = new Perceptron(population_size, random_per_generation, num_inputs, num_hidden, num_outputs);
+  Genetic_NeuralNetwork gnn = new Genetic_NeuralNetwork(population_size, random_per_generation, num_inputs, num_hidden, num_outputs);
 
 Feeding Data through a Genetic Neural Network and receiving the Output
 ----------------------------------------------------------------------

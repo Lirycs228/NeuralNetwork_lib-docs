@@ -10,7 +10,7 @@ Initializing a Genetic Perceptron
   int num_outputs = 1;
   int population_size = 100;
   int random_per_generation = 10;
-  Perceptron gpnn = new Perceptron(population_size, random_per_generation, num_inputs, num_outputs);
+  Genetic_Perceptron gpnn = new Genetic_Perceptron(population_size, random_per_generation, num_inputs, num_outputs);
 
 Feeding Data through a Genetic Perceptron and receiving the Output
 ------------------------------------------------------------------
