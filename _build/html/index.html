@@ -31,7 +31,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Perceptron" href="perceptron.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -80,43 +81,20 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">NeuralNetwork_lib</a></li>
-<li><a class="reference internal" href="#perceptron">Perceptron</a><ul>
-<li><a class="reference internal" href="#initializing-a-perceptron">Initializing a Perceptron</a></li>
-<li><a class="reference internal" href="#feeding-data-through-a-perceptron-and-receiving-the-output">Feeding Data through a Perceptron and receiving the Output</a></li>
-<li><a class="reference internal" href="#training-a-perceptron">Training a Perceptron</a><ul>
-<li><a class="reference internal" href="#use-momentum-for-training">use momentum for training</a></li>
+              <p class="caption"><span class="caption-text">Neural Networks:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="perceptron.html">Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="neuralnetwork.html">Neural Network</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#setting-extra-variables">Setting extra Variables</a></li>
+<p class="caption"><span class="caption-text">Neuroevolution:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="gen_perceptron.html">Genetic Perceptron</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#genetic-perceptron">Genetic Perceptron</a><ul>
-<li><a class="reference internal" href="#initializing-a-genetic-perceptron">Initializing a Genetic Perceptron</a></li>
-<li><a class="reference internal" href="#feeding-data-through-a-genetic-perceptron-and-receiving-the-output">Feeding Data through a Genetic Perceptron and receiving the Output</a></li>
-<li><a class="reference internal" href="#training-a-genetic-perceptron">Training a Genetic Perceptron</a></li>
-<li><a class="reference internal" href="#id1">Setting extra Variables</a></li>
+<p class="caption"><span class="caption-text">General:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="saveload.html">Saving and Loading</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#neural-network">Neural Network</a><ul>
-<li><a class="reference internal" href="#initializing-a-neural-network">Initializing a Neural Network</a></li>
-<li><a class="reference internal" href="#feeding-data-through-a-neural-network-and-receiving-the-output">Feeding Data through a Neural Network and receiving the Output</a></li>
-<li><a class="reference internal" href="#training-a-neural-network">Training a Neural Network</a><ul>
-<li><a class="reference internal" href="#id2">use momentum for training</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id3">Setting extra Variables</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#saving-and-loading">Saving and Loading</a><ul>
-<li><a class="reference internal" href="#id4">Perceptron</a></li>
-<li><a class="reference internal" href="#id5">Neural Network</a></li>
-</ul>
-</li>
-</ul>
-</div>
+
             
           
         </div>
@@ -182,177 +160,59 @@
   <div class="section" id="neuralnetwork-lib">
 <h1>NeuralNetwork_lib<a class="headerlink" href="#neuralnetwork-lib" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Neural Networks:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="perceptron.html">Perceptron</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="perceptron.html#initializing-a-perceptron">Initializing a Perceptron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perceptron.html#feeding-data-through-a-perceptron-and-receiving-the-output">Feeding Data through a Perceptron and receiving the Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perceptron.html#training-a-perceptron">Training a Perceptron</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="perceptron.html#use-momentum-for-training">use momentum for training</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="perceptron.html#setting-extra-variables">Setting extra Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="neuralnetwork.html">Neural Network</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="neuralnetwork.html#initializing-a-neural-network">Initializing a Neural Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuralnetwork.html#feeding-data-through-a-neural-network-and-receiving-the-output">Feeding Data through a Neural Network and receiving the Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuralnetwork.html#training-a-neural-network">Training a Neural Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="neuralnetwork.html#use-momentum-for-training">use momentum for training</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="neuralnetwork.html#setting-extra-variables">Setting extra Variables</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Neuroevolution:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="gen_perceptron.html">Genetic Perceptron</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gen_perceptron.html#initializing-a-genetic-perceptron">Initializing a Genetic Perceptron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen_perceptron.html#feeding-data-through-a-genetic-perceptron-and-receiving-the-output">Feeding Data through a Genetic Perceptron and receiving the Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen_perceptron.html#training-a-genetic-perceptron">Training a Genetic Perceptron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen_perceptron.html#setting-extra-variables">Setting extra Variables</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">General:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="saveload.html">Saving and Loading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="saveload.html#perceptron">Perceptron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="saveload.html#neural-network">Neural Network</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
-<div class="section" id="perceptron">
-<h1>Perceptron<a class="headerlink" href="#perceptron" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="initializing-a-perceptron">
-<h2>Initializing a Perceptron<a class="headerlink" href="#initializing-a-perceptron" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num_inputs</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
-<span class="kt">int</span> <span class="n">num_outputs</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-<span class="n">Perceptron</span> <span class="n">pnn</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Perceptron</span><span class="o">(</span><span class="n">num_inputs</span><span class="o">,</span> <span class="n">num_outputs</span><span class="o">);</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="feeding-data-through-a-perceptron-and-receiving-the-output">
-<h2>Feeding Data through a Perceptron and receiving the Output<a class="headerlink" href="#feeding-data-through-a-perceptron-and-receiving-the-output" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">inputs</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">};</span>
-<span class="kt">float</span><span class="o">[]</span> <span class="n">outputs</span> <span class="o">=</span> <span class="n">pnn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">);</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">outputs</span><span class="o">);</span>
-<span class="c1">// gives : [0.5345]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="training-a-perceptron">
-<h2>Training a Perceptron<a class="headerlink" href="#training-a-perceptron" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">answers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">};</span>
-<span class="n">pnn</span><span class="o">.</span><span class="na">train_gradient_descent</span><span class="o">(</span><span class="n">inputs</span><span class="o">,</span> <span class="n">answers</span><span class="o">);</span>
-
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">pnn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">));</span>
-<span class="c1">// gives : [0.98799]</span>
-</pre></div>
-</div>
-<div class="section" id="use-momentum-for-training">
-<h3>use momentum for training<a class="headerlink" href="#use-momentum-for-training" title="Permalink to this headline">¶</a></h3>
-<p><strong>considered as a faster way of training</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">answers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">};</span>
-<span class="n">pnn</span><span class="o">.</span><span class="na">train_momentum_gradient_descent</span><span class="o">(</span><span class="n">inputs</span><span class="o">,</span> <span class="n">answers</span><span class="o">);</span>
-
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">pnn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">));</span>
-<span class="c1">// gives : [0.98799]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="setting-extra-variables">
-<h2>Setting extra Variables<a class="headerlink" href="#setting-extra-variables" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pnn</span><span class="o">.</span><span class="na">set_learning_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
-<span class="n">pnn</span><span class="o">.</span><span class="na">set_momentum_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
-<span class="n">pnn</span><span class="o">.</span><span class="na">set_print_interval</span><span class="o">(</span><span class="kt">int</span><span class="o">);</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="genetic-perceptron">
-<h1>Genetic Perceptron<a class="headerlink" href="#genetic-perceptron" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="initializing-a-genetic-perceptron">
-<h2>Initializing a Genetic Perceptron<a class="headerlink" href="#initializing-a-genetic-perceptron" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num_inputs</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
-<span class="kt">int</span> <span class="n">num_outputs</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-<span class="kt">int</span> <span class="n">population_size</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
-<span class="kt">int</span> <span class="n">random_per_generation</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
-<span class="n">Perceptron</span> <span class="n">gpnn</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Perceptron</span><span class="o">(</span><span class="n">population_size</span><span class="o">,</span> <span class="n">random_per_generation</span><span class="o">,</span> <span class="n">num_inputs</span><span class="o">,</span> <span class="n">num_outputs</span><span class="o">);</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="feeding-data-through-a-genetic-perceptron-and-receiving-the-output">
-<h2>Feeding Data through a Genetic Perceptron and receiving the Output<a class="headerlink" href="#feeding-data-through-a-genetic-perceptron-and-receiving-the-output" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">inputs</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">};</span>
-<span class="kt">float</span><span class="o">[]</span> <span class="n">outputs</span> <span class="o">=</span> <span class="n">gpnn</span><span class="o">.</span><span class="na">overall_best</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">);</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">outputs</span><span class="o">);</span>
-<span class="c1">// gives : [0.5345]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="training-a-genetic-perceptron">
-<h2>Training a Genetic Perceptron<a class="headerlink" href="#training-a-genetic-perceptron" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">answers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">};</span>
-<span class="kt">int</span> <span class="n">total_generations</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">;</span>
-<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">generation</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">generation</span> <span class="o">&lt;</span> <span class="n">total_generations</span><span class="o">;</span> <span class="n">generation</span><span class="o">++)</span> <span class="o">{</span>
-  <span class="n">Perceptron</span><span class="o">[]</span> <span class="n">current_generation</span> <span class="o">=</span> <span class="n">gpnn</span><span class="o">.</span><span class="na">get_current_generation</span><span class="o">();</span>
-  <span class="kt">float</span><span class="o">[]</span> <span class="n">current_fitness</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[</span><span class="n">current_generation</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
-  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">aspect</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">aspect</span> <span class="o">&lt;</span> <span class="n">current_generation</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">aspect</span><span class="o">++)</span> <span class="o">{</span>
-    <span class="n">current_fitness</span><span class="o">[</span><span class="n">aspect</span><span class="o">]</span> <span class="o">=</span> <span class="n">answers</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">-</span> <span class="n">current_generation</span><span class="o">[</span><span class="n">aspect</span><span class="o">].</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">));</span>
-  <span class="o">}</span>
-  <span class="n">enn</span><span class="o">.</span><span class="na">evolve_best</span><span class="o">(</span><span class="n">current_fitness</span><span class="o">);</span>
-<span class="o">}</span>
-
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">gpnn</span><span class="o">.</span><span class="na">overall_best</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">));</span>
-<span class="c1">// gives : [0.98799]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id1">
-<h2>Setting extra Variables<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pnn</span><span class="o">.</span><span class="na">set_mutation_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
-<span class="n">pnn</span><span class="o">.</span><span class="na">set_evolution_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
-<span class="n">pnn</span><span class="o">.</span><span class="na">set_offspring_mutation_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="neural-network">
-<h1>Neural Network<a class="headerlink" href="#neural-network" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="initializing-a-neural-network">
-<h2>Initializing a Neural Network<a class="headerlink" href="#initializing-a-neural-network" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num_inputs</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
-<span class="kt">int</span><span class="o">[]</span> <span class="n">num_hidden</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">};</span>
-<span class="kt">int</span> <span class="n">num_outputs</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-<span class="n">NeuralNetwork</span> <span class="n">nn</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NeuralNetwork</span><span class="o">(</span><span class="n">num_inputs</span><span class="o">,</span> <span class="n">num_hidden</span><span class="o">,</span> <span class="n">um_outputs</span><span class="o">);</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="feeding-data-through-a-neural-network-and-receiving-the-output">
-<h2>Feeding Data through a Neural Network and receiving the Output<a class="headerlink" href="#feeding-data-through-a-neural-network-and-receiving-the-output" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">inputs</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">};</span>
-<span class="kt">float</span><span class="o">[]</span> <span class="n">outputs</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">);</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">outputs</span><span class="o">);</span>
-<span class="c1">// gives : [0.5345]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="training-a-neural-network">
-<h2>Training a Neural Network<a class="headerlink" href="#training-a-neural-network" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">answers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">};</span>
-<span class="n">nn</span><span class="o">.</span><span class="na">train_gradient_descent</span><span class="o">(</span><span class="n">inputs</span><span class="o">,</span> <span class="n">answers</span><span class="o">);</span>
-
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">nn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">));</span>
-<span class="c1">// gives : [0.98799]</span>
-</pre></div>
-</div>
-<div class="section" id="id2">
-<h3>use momentum for training<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p><strong>considered as a faster way of training</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">answers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">};</span>
-<span class="n">nn</span><span class="o">.</span><span class="na">train_momentum_gradient_descent</span><span class="o">(</span><span class="n">inputs</span><span class="o">,</span> <span class="n">answers</span><span class="o">);</span>
-
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">nn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">));</span>
-<span class="c1">// gives : [0.98799]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id3">
-<h2>Setting extra Variables<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pnn</span><span class="o">.</span><span class="na">set_learning_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
-<span class="n">pnn</span><span class="o">.</span><span class="na">set_momentum_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
-<span class="n">pnn</span><span class="o">.</span><span class="na">set_print_interval</span><span class="o">(</span><span class="kt">int</span><span class="o">);</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="saving-and-loading">
-<h1>Saving and Loading<a class="headerlink" href="#saving-and-loading" title="Permalink to this headline">¶</a></h1>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">save() may throw an IOException</p>
-</div>
-<div class="section" id="id4">
-<h2>Perceptron<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;path\\to\\file.nn&quot;</span><span class="o">;</span>
-<span class="n">Perceptron</span> <span class="n">pnn</span> <span class="o">=</span> <span class="n">Load</span><span class="o">.</span><span class="na">Load_Perceptron</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
-<span class="n">pnn</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>Neural Network<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;path\\to\\file.nn&quot;</span><span class="o">;</span>
-<span class="n">NeuralNetwork</span> <span class="n">nn</span> <span class="o">=</span> <span class="n">Load</span><span class="o">.</span><span class="na">Load_NeuralNetwork</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
-<span class="n">nn</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
-</pre></div>
-</div>
-</div>
+<div class="section" id="about">
+<h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
+<p>NeuralNetwork_lib is a Java Library made to easily construct
+Neural Networks and later on even Convolutional Neural networks and LSTM’s.</p>
+<p>It is a project by Erik Hammon who tries to gain more knowledge about the inner
+workings of Neural networks by building this Library.</p>
 </div>
 
 
@@ -360,6 +220,13 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="perceptron.html" class="btn btn-neutral float-right" title="Perceptron" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
   
 
   <hr/>
