@@ -67,7 +67,7 @@ language = None
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'monokai'#manni;tango;emacs;friendly;monokai;perldoc
+pygments_style = 'monokai' #manni;tango;emacs;friendly;monokai;perldoc
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -95,7 +95,6 @@ html_theme_options = {
     'sticky_navigation': True,
     'navigation_depth': 4,
     'includehidden': True,
-    'titles_only': False
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
