@@ -10,7 +10,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Neural Network &mdash; NeuralNetwork_lib alpha documentation</title>
+  <title>Convolutional Neural Network &mdash; NeuralNetwork_lib alpha documentation</title>
   
 
   
@@ -32,8 +32,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Genetic Perceptron" href="gen_perceptron.html" />
-    <link rel="prev" title="Perceptron" href="perceptron.html" /> 
+    <link rel="next" title="Saving and Loading" href="saveload.html" />
+    <link rel="prev" title="Genetic Neural Network" href="gen_neuralnetwork.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -83,10 +83,19 @@
             
             
               <p class="caption"><span class="caption-text">Neural Networks:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="perceptron.html">Perceptron</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Neural Network</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#initializing-a-neural-network">Initializing a Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="neuralnetwork.html">Neural Network</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Neuroevolution:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="gen_perceptron.html">Genetic Perceptron</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gen_neuralnetwork.html">Genetic Neural Network</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Convolution:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Convolutional Neural Network</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#initializing-a-convolutional-neural-network">Initializing a Convolutional Neural Network</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#feeding-data-through-a-neural-network-and-receiving-the-output">Feeding Data through a Neural Network and receiving the Output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#training-a-neural-network">Training a Neural Network</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#use-momentum-for-training">use momentum for training</a></li>
@@ -95,15 +104,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#setting-extra-variables">Setting extra Variables</a></li>
 </ul>
 </li>
-</ul>
-<p class="caption"><span class="caption-text">Neuroevolution:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gen_perceptron.html">Genetic Perceptron</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gen_neuralnetwork.html">Genetic Neural Network</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Convolution:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="convolutional.html">Convolutional Neural Network</a></li>
 </ul>
 <p class="caption"><span class="caption-text">General:</span></p>
 <ul>
@@ -153,13 +153,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Neural Network</li>
+      <li>Convolutional Neural Network</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/neuralnetwork.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/convolutional.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -172,10 +172,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="neural-network">
-<h1>Neural Network<a class="headerlink" href="#neural-network" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="initializing-a-neural-network">
-<h2>Initializing a Neural Network<a class="headerlink" href="#initializing-a-neural-network" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="convolutional-neural-network">
+<h1>Convolutional Neural Network<a class="headerlink" href="#convolutional-neural-network" title="Permalink to this headline">¶</a></h1>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">DO NOT USE!!!
+NOT WORKING!!!</p>
+</div>
+<div class="section" id="initializing-a-convolutional-neural-network">
+<h2>Initializing a Convolutional Neural Network<a class="headerlink" href="#initializing-a-convolutional-neural-network" title="Permalink to this headline">¶</a></h2>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">DO NOT USE!!!
+NOT WORKING!!!</p>
+</div>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num_inputs</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
 <span class="kt">int</span><span class="o">[]</span> <span class="n">num_hidden</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">};</span>
 <span class="kt">int</span> <span class="n">num_outputs</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
@@ -185,6 +195,11 @@
 </div>
 <div class="section" id="feeding-data-through-a-neural-network-and-receiving-the-output">
 <h2>Feeding Data through a Neural Network and receiving the Output<a class="headerlink" href="#feeding-data-through-a-neural-network-and-receiving-the-output" title="Permalink to this headline">¶</a></h2>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">DO NOT USE!!!
+NOT WORKING!!!</p>
+</div>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">inputs</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">};</span>
 <span class="kt">float</span><span class="o">[]</span> <span class="n">outputs</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">);</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">outputs</span><span class="o">);</span>
@@ -194,6 +209,11 @@
 </div>
 <div class="section" id="training-a-neural-network">
 <h2>Training a Neural Network<a class="headerlink" href="#training-a-neural-network" title="Permalink to this headline">¶</a></h2>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">DO NOT USE!!!
+NOT WORKING!!!</p>
+</div>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">answers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">};</span>
 <span class="n">nn</span><span class="o">.</span><span class="na">train_gradient_descent</span><span class="o">(</span><span class="n">inputs</span><span class="o">,</span> <span class="n">answers</span><span class="o">);</span>
 
@@ -215,6 +235,11 @@
 </div>
 <div class="section" id="setting-extra-variables">
 <h2>Setting extra Variables<a class="headerlink" href="#setting-extra-variables" title="Permalink to this headline">¶</a></h2>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">DO NOT USE!!!
+NOT WORKING!!!</p>
+</div>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pnn</span><span class="o">.</span><span class="na">set_learning_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
 <span class="n">pnn</span><span class="o">.</span><span class="na">set_momentum_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
 <span class="n">pnn</span><span class="o">.</span><span class="na">set_print_interval</span><span class="o">(</span><span class="kt">int</span><span class="o">);</span>
@@ -231,10 +256,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="gen_perceptron.html" class="btn btn-neutral float-right" title="Genetic Perceptron" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="saveload.html" class="btn btn-neutral float-right" title="Saving and Loading" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="perceptron.html" class="btn btn-neutral" title="Perceptron" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="gen_neuralnetwork.html" class="btn btn-neutral" title="Genetic Neural Network" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

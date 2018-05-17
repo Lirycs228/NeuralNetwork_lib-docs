@@ -19,6 +19,13 @@ NeuralNetwork_lib
   :caption: Neuroevolution:
 
   gen_perceptron
+  gen_neuralnetwork
+
+.. toctree::
+  :maxdepth: 0
+  :caption: Convolution:
+
+  convolutional
 
 .. toctree::
   :maxdepth: 0

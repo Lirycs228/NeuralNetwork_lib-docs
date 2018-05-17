@@ -20,3 +20,9 @@ Neural Network
   String path = "path\\to\\file.nn";
   NeuralNetwork nn = Load.Load_NeuralNetwork(path);
   nn.save(path);
+
+Convolutional Neural Network
+----------------------------
+
+.. ATTENTION::
+  Convolutional Neural Networks are not yet supported in this
