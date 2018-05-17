@@ -32,6 +32,7 @@ NeuralNetwork_lib
   :caption: General:
 
   saveload
+  download
 
 About
 =====

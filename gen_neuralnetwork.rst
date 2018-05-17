@@ -13,8 +13,8 @@ Initializing a Genetic Neural Network
   int random_per_generation = 10;
   Perceptron gnn = new Perceptron(population_size, random_per_generation, num_inputs, num_hidden, num_outputs);
 
-Feeding Data through a Genetic Perceptron and receiving the Output
-------------------------------------------------------------------
+Feeding Data through a Genetic Neural Network and receiving the Output
+----------------------------------------------------------------------
 .. code-block:: java
 
   float[] inputs = new float[] {1, 0};
@@ -22,8 +22,8 @@ Feeding Data through a Genetic Perceptron and receiving the Output
   System.out.println(outputs);
   // gives : [0.5345]
 
-Training a Genetic Perceptron
------------------------------
+Training a Genetic Neural Network
+----------------------------------
 .. code-block:: java
 
   float[] answers = new float[] {1};

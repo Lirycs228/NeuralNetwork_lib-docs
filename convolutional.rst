@@ -33,8 +33,8 @@ Initializing a Convolutional Neural Network
 
   ConvolutionalNeuralNetwork cnn = new ConvolutionalNeuralNetwork(input_structure, conv_blocks, fully_connected_layer);
 
-Feeding Data through a Neural Network and receiving the Output
---------------------------------------------------------------
+Feeding Data through a Convolutional Neural Network and receiving the Output
+----------------------------------------------------------------------------
 
 .. DANGER::
   DO NOT USE!!!
@@ -50,8 +50,8 @@ Feeding Data through a Neural Network and receiving the Output
   System.out.println(outputs);
   // gives : [0.5345, 0.4325, 0.6578]
 
-Training a Neural Network
--------------------------
+Training a Convolutional Neural Network
+---------------------------------------
 
 .. DANGER::
   DO NOT USE!!!
