@@ -100,6 +100,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Saving and Loading</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#perceptron">Perceptron</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#neural-network">Neural Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#genetic-perceptron">Genetic Perceptron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#genetic-neural-network">Genetic Neural Network</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#convolutional-neural-network">Convolutional Neural Network</a></li>
 </ul>
 </li>
@@ -189,10 +191,32 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="genetic-perceptron">
+<h2>Genetic Perceptron<a class="headerlink" href="#genetic-perceptron" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">It is only possible to save the best Perceptron and the Genetic_Perceptron can not be reloaded</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;path\\to\\file.nn&quot;</span><span class="o">;</span>
+<span class="n">pnn</span><span class="o">.</span><span class="na">overall_best</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="genetic-neural-network">
+<h2>Genetic Neural Network<a class="headerlink" href="#genetic-neural-network" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">It is only possible to save the best Neural Network and the Genetic_NeuralNetwork can not be reloaded</p>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;path\\to\\file.nn&quot;</span><span class="o">;</span>
+<span class="n">nn</span><span class="o">.</span><span class="na">overall_best</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="convolutional-neural-network">
 <h2>Convolutional Neural Network<a class="headerlink" href="#convolutional-neural-network" title="Permalink to this headline">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
 <p class="last">Convolutional Neural Networks are not yet supported in this</p>
 </div>
 </div>

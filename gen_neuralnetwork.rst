@@ -29,7 +29,7 @@ Training a Genetic Perceptron
   float[] answers = new float[] {1};
   int total_generations = 1000;
   for (int generation = 0; generation < total_generations; generation++) {
-    NeuralNetwork[] current_generation = gpnn.get_current_generation();
+    NeuralNetwork[] current_generation = gnn.get_current_generation();
     float[] current_fitness = new float[current_generation.length];
     for (int aspect = 0; aspect < current_generation.length; aspect++) {
       current_fitness[aspect] = answers[0] - current_generation[aspect].feedforward(inputs));

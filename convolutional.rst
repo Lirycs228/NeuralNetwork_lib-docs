@@ -15,10 +15,23 @@ Initializing a Convolutional Neural Network
 
 .. code-block:: java
 
-  int num_inputs = 2;
-  int[] num_hidden = new int[] {4, 3};
-  int num_outputs = 1;
-  NeuralNetwork nn = new NeuralNetwork(num_inputs, num_hidden, um_outputs);
+  int input_img_channels = 3;
+  int input_img_height = 16;
+  int input_img_width = 16;
+  int[] input_structure = int[] {input_img_channels, input_img_height, input_img_width};
+
+  int num_conv_layers = 2;
+  int num_conv_nodes = 100;
+  int filter_size = 3;
+  int[] conv_block = int[] {num_conv_layers, num_conv_nodes, filter_size};
+  int[][] conv_blocks = int[][] {conv_block, conv_block};
+
+  int num_hidden_1 = 12;
+  int num_hidden_2 = 9;
+  int num_outputs = 3;
+  int[] fully_connected_layer = int[] {num_hidden_1, num_hidden_2, num_outputs};
+
+  ConvolutionalNeuralNetwork cnn = new ConvolutionalNeuralNetwork(input_structure, conv_blocks, fully_connected_layer);
 
 Feeding Data through a Neural Network and receiving the Output
 --------------------------------------------------------------
@@ -29,10 +42,13 @@ Feeding Data through a Neural Network and receiving the Output
 
 .. code-block:: java
 
-  float[] inputs = new float[] {1, 0};
-  float[] outputs = nn.feedforward(inputs);
+  float[][] red_channel_img = // load image r
+  float[][] green_channel_img = // load image g
+  float[][] blue_channel_img = // load image b
+  float[][][] inputs = new float[][][] {red_channel_img, green_channel_img, blue_channel_img};
+  float[] outputs = cnn.feedforward(inputs);
   System.out.println(outputs);
-  // gives : [0.5345]
+  // gives : [0.5345, 0.4325, 0.6578]
 
 Training a Neural Network
 -------------------------
@@ -43,23 +59,11 @@ Training a Neural Network
 
 .. code-block:: java
 
-  float[] answers = new float[] {1};
-  nn.train_gradient_descent(inputs, answers);
+  float[] answers = new float[] {1, 0, 0};
+  cnn.train_gradient_descent(inputs, answers);
 
-  System.out.println(nn.feedforward(inputs));
-  // gives : [0.98799]
-
-use momentum for training
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-**considered as a faster way of training**
-
-.. code-block:: java
-
-  float[] answers = new float[] {1};
-  nn.train_momentum_gradient_descent(inputs, answers);
-
-  System.out.println(nn.feedforward(inputs));
-  // gives : [0.98799]
+  System.out.println(cnn.feedforward(inputs));
+  // gives : [0.98799, 0.1203, 0.0265]
 
 Setting extra Variables
 -----------------------
@@ -70,6 +74,4 @@ Setting extra Variables
 
 .. code-block:: java
 
-  pnn.set_learning_rate(float);
-  pnn.set_momentum_rate(float);
-  pnn.set_print_interval(int);
+  cnn.set_learning_rate(float);

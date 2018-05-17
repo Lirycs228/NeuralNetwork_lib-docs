@@ -97,10 +97,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Convolutional Neural Network</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#initializing-a-convolutional-neural-network">Initializing a Convolutional Neural Network</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#feeding-data-through-a-neural-network-and-receiving-the-output">Feeding Data through a Neural Network and receiving the Output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#training-a-neural-network">Training a Neural Network</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#use-momentum-for-training">use momentum for training</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#training-a-neural-network">Training a Neural Network</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setting-extra-variables">Setting extra Variables</a></li>
 </ul>
 </li>
@@ -186,10 +183,23 @@ NOT WORKING!!!</p>
 <p class="last">DO NOT USE!!!
 NOT WORKING!!!</p>
 </div>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num_inputs</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
-<span class="kt">int</span><span class="o">[]</span> <span class="n">num_hidden</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">};</span>
-<span class="kt">int</span> <span class="n">num_outputs</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-<span class="n">NeuralNetwork</span> <span class="n">nn</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NeuralNetwork</span><span class="o">(</span><span class="n">num_inputs</span><span class="o">,</span> <span class="n">num_hidden</span><span class="o">,</span> <span class="n">um_outputs</span><span class="o">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">input_img_channels</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">input_img_height</span> <span class="o">=</span> <span class="mi">16</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">input_img_width</span> <span class="o">=</span> <span class="mi">16</span><span class="o">;</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">input_structure</span> <span class="o">=</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="n">input_img_channels</span><span class="o">,</span> <span class="n">input_img_height</span><span class="o">,</span> <span class="n">input_img_width</span><span class="o">};</span>
+
+<span class="kt">int</span> <span class="n">num_conv_layers</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">num_conv_nodes</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">filter_size</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">conv_block</span> <span class="o">=</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="n">num_conv_layers</span><span class="o">,</span> <span class="n">num_conv_nodes</span><span class="o">,</span> <span class="n">filter_size</span><span class="o">};</span>
+<span class="kt">int</span><span class="o">[][]</span> <span class="n">conv_blocks</span> <span class="o">=</span> <span class="kt">int</span><span class="o">[][]</span> <span class="o">{</span><span class="n">conv_block</span><span class="o">,</span> <span class="n">conv_block</span><span class="o">};</span>
+
+<span class="kt">int</span> <span class="n">num_hidden_1</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">num_hidden_2</span> <span class="o">=</span> <span class="mi">9</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">num_outputs</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">fully_connected_layer</span> <span class="o">=</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="n">num_hidden_1</span><span class="o">,</span> <span class="n">num_hidden_2</span><span class="o">,</span> <span class="n">num_outputs</span><span class="o">};</span>
+
+<span class="n">ConvolutionalNeuralNetwork</span> <span class="n">cnn</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ConvolutionalNeuralNetwork</span><span class="o">(</span><span class="n">input_structure</span><span class="o">,</span> <span class="n">conv_blocks</span><span class="o">,</span> <span class="n">fully_connected_layer</span><span class="o">);</span>
 </pre></div>
 </div>
 </div>
@@ -200,10 +210,13 @@ NOT WORKING!!!</p>
 <p class="last">DO NOT USE!!!
 NOT WORKING!!!</p>
 </div>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">inputs</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">};</span>
-<span class="kt">float</span><span class="o">[]</span> <span class="n">outputs</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[][]</span> <span class="n">red_channel_img</span> <span class="o">=</span> <span class="c1">// load image r</span>
+<span class="kt">float</span><span class="o">[][]</span> <span class="n">green_channel_img</span> <span class="o">=</span> <span class="c1">// load image g</span>
+<span class="kt">float</span><span class="o">[][]</span> <span class="n">blue_channel_img</span> <span class="o">=</span> <span class="c1">// load image b</span>
+<span class="kt">float</span><span class="o">[][][]</span> <span class="n">inputs</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[][][]</span> <span class="o">{</span><span class="n">red_channel_img</span><span class="o">,</span> <span class="n">green_channel_img</span><span class="o">,</span> <span class="n">blue_channel_img</span><span class="o">};</span>
+<span class="kt">float</span><span class="o">[]</span> <span class="n">outputs</span> <span class="o">=</span> <span class="n">cnn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">);</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">outputs</span><span class="o">);</span>
-<span class="c1">// gives : [0.5345]</span>
+<span class="c1">// gives : [0.5345, 0.4325, 0.6578]</span>
 </pre></div>
 </div>
 </div>
@@ -214,23 +227,12 @@ NOT WORKING!!!</p>
 <p class="last">DO NOT USE!!!
 NOT WORKING!!!</p>
 </div>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">answers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">};</span>
-<span class="n">nn</span><span class="o">.</span><span class="na">train_gradient_descent</span><span class="o">(</span><span class="n">inputs</span><span class="o">,</span> <span class="n">answers</span><span class="o">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">answers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">};</span>
+<span class="n">cnn</span><span class="o">.</span><span class="na">train_gradient_descent</span><span class="o">(</span><span class="n">inputs</span><span class="o">,</span> <span class="n">answers</span><span class="o">);</span>
 
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">nn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">));</span>
-<span class="c1">// gives : [0.98799]</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">cnn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">));</span>
+<span class="c1">// gives : [0.98799, 0.1203, 0.0265]</span>
 </pre></div>
-</div>
-<div class="section" id="use-momentum-for-training">
-<h3>use momentum for training<a class="headerlink" href="#use-momentum-for-training" title="Permalink to this headline">¶</a></h3>
-<p><strong>considered as a faster way of training</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">answers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">};</span>
-<span class="n">nn</span><span class="o">.</span><span class="na">train_momentum_gradient_descent</span><span class="o">(</span><span class="n">inputs</span><span class="o">,</span> <span class="n">answers</span><span class="o">);</span>
-
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">nn</span><span class="o">.</span><span class="na">feedforward</span><span class="o">(</span><span class="n">inputs</span><span class="o">));</span>
-<span class="c1">// gives : [0.98799]</span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="section" id="setting-extra-variables">
@@ -240,9 +242,7 @@ NOT WORKING!!!</p>
 <p class="last">DO NOT USE!!!
 NOT WORKING!!!</p>
 </div>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">pnn</span><span class="o">.</span><span class="na">set_learning_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
-<span class="n">pnn</span><span class="o">.</span><span class="na">set_momentum_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
-<span class="n">pnn</span><span class="o">.</span><span class="na">set_print_interval</span><span class="o">(</span><span class="kt">int</span><span class="o">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">cnn</span><span class="o">.</span><span class="na">set_learning_rate</span><span class="o">(</span><span class="kt">float</span><span class="o">);</span>
 </pre></div>
 </div>
 </div>
